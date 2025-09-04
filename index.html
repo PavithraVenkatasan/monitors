@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search with Formspree</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #fff;
+      margin: 0;
+    }
+    .search-box {
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+    }
+    .search-box h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #4285F4;
+      letter-spacing: 1px;
+    }
+    .search-box form {
+      display: flex;
+      border: 1px solid #dfe1e5;
+      box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+      border-radius: 24px;
+      padding: 5px 10px;
+    }
+    .search-box input[type="text"] {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      padding: 10px;
+    }
+    .search-box button {
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-left: 8px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .search-box button:hover {
+      background: #1669c1;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-box">
+    <h1>MySearch</h1>
+    <form action="https://formspree.io/f/xnnbodll">
+      <!-- User query -->
+      <input type="text" name="query" placeholder="Search here..." required>
+      
+      <!-- Hidden Formspree fields -->
+      <input type="hidden" name="_subject" value="New Search Query">
+      <input type="hidden" name="_captcha" value="false">
+      
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</body>
+</html>
